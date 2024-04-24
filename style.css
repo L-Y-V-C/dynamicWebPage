@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family:system-ui;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top right, #ffffff 0%, #000000 100%);
+}
+.container{
+
+    background-color: #b6b6b6;
+    border-radius: 5%;
+    width: 700px;
+    padding: 20px;
+    box-shadow: 0 2px 2px 3px rgba(0,0,0,0.4);
+}
+label{
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+}
+#Names,
+#SurNames,
+#Email,
+#Phone{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #cac8c8;
+    border-radius: 5px;
+}
+.wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #54565e;
+}
+.addBtn1,.addBtn2,.addBtn3,.addBtn4{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    border-radius: 40%;
+    width: 35px;
+    height: 35px;
+    background-color: #2fb43a;
+    font-size: 1.5rem;
+    color: #ffffff;
+    
+}
+input[type="submit"] {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: block;
+    margin: 0 auto;
+    width: auto;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/*creacion dinamica*/
+.flex{
+    display: flex;
+    gap: 1.5em;
+    margin-bottom: 15px;
+}
+.delete{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    background-color: #f44336;
+    color: #ffffff;
+    border-radius: 40%;
+    font-size: 1.5rem;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+input{
+    padding: 8px;
+    background-color: #e0dede;
+    border: none;
+    width: 45%;
+    border-radius: 5px;
+}
+input:focus{
+    outline: 1px solid #efefef;
+}
