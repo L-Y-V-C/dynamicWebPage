@@ -9,7 +9,7 @@
     </head>
     <body>
         <div class="container">
-            <form method="post">
+            <form action="register.php" method="POST">
                 <label for="Names">Nombres:</label>
                 <input type="text" name="Names" id="Names" size="30" required>
                 <label for="SurNames">Apellidos:</label>
@@ -51,9 +51,7 @@
                 </div>
             </form>
         </div>
-        <?php
-            include("register.php");
-        ?>
+        
         <script src="script.js"></script>
     </body>
 </html>
