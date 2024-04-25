@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 24, 2024 at 09:47 AM
+-- Generation Time: Apr 25, 2024 at 06:27 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -34,6 +34,15 @@ CREATE TABLE `education` (
   `career` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `education`
+--
+
+INSERT INTO `education` (`id`, `userid`, `institution`, `career`) VALUES
+(1, 44, 'ucsp', 'computacion'),
+(2, 44, 'unsa', 'ing. perforaciones'),
+(3, 45, 'iestp', 'secretariado ejecutivo');
+
 -- --------------------------------------------------------
 
 --
@@ -47,6 +56,16 @@ CREATE TABLE `experience` (
   `job` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `experience`
+--
+
+INSERT INTO `experience` (`id`, `userid`, `organization`, `job`) VALUES
+(3, 44, 'Gloria', 'asistente'),
+(4, 44, 'Abel SRL', 'supervisor'),
+(5, 45, 'manrique SA', 'secretaria'),
+(6, 45, 'bbva', 'cajera');
+
 -- --------------------------------------------------------
 
 --
@@ -59,6 +78,16 @@ CREATE TABLE `languages` (
   `language` varchar(50) NOT NULL,
   `level` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `languages`
+--
+
+INSERT INTO `languages` (`id`, `userid`, `language`, `level`) VALUES
+(1, 44, 'aleman', 'fluido'),
+(2, 44, 'ingles', 'avanzado'),
+(3, 45, 'portugues', 'basico'),
+(4, 45, 'ingles', 'medio');
 
 -- --------------------------------------------------------
 
@@ -79,8 +108,8 @@ CREATE TABLE `maindata` (
 --
 
 INSERT INTO `maindata` (`id`, `names`, `surnames`, `email`, `phone`) VALUES
-(1, 'Luigi', 'Valenzuela', 'lyvc@gmail.com', '123456789'),
-(23, 'Yamil', 'Calderon', 'yc@gmail.com', '987654321');
+(44, 'Luigi Yamil', 'Valenzuela Calderon', 'lyvc@gmail.com', '999999999'),
+(45, 'Anani', 'Luque', 'aluq@hotmail.com', '912345678');
 
 -- --------------------------------------------------------
 
@@ -93,6 +122,17 @@ CREATE TABLE `skills` (
   `userid` int(2) NOT NULL,
   `skill` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `skills`
+--
+
+INSERT INTO `skills` (`id`, `userid`, `skill`) VALUES
+(3, 44, 'Trabajo en equipo'),
+(4, 44, 'Responsable'),
+(5, 45, 'adaptabilidad'),
+(6, 45, 'actitud positiva'),
+(7, 45, 'dedicacion');
 
 --
 -- Indexes for dumped tables
@@ -140,31 +180,31 @@ ALTER TABLE `skills`
 -- AUTO_INCREMENT for table `education`
 --
 ALTER TABLE `education`
-  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `experience`
 --
 ALTER TABLE `experience`
-  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `languages`
 --
 ALTER TABLE `languages`
-  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `maindata`
 --
 ALTER TABLE `maindata`
-  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT for table `skills`
 --
 ALTER TABLE `skills`
-  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Constraints for dumped tables
